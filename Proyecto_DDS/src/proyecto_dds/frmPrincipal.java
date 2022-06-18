@@ -42,12 +42,16 @@ public class frmPrincipal extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Bienvenido al Banco Nacional");
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 204));
         jButton1.setText("Crear Usuario");
 
+        jButton2.setBackground(new java.awt.Color(204, 255, 204));
         jButton2.setText("Ver Empleados");
 
+        jButton3.setBackground(new java.awt.Color(255, 204, 255));
         jButton3.setText("Crear Planilla");
 
+        jButton4.setBackground(new java.awt.Color(204, 255, 255));
         jButton4.setText("Salir");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
