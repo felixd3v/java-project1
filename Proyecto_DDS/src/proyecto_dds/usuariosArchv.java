@@ -12,7 +12,6 @@ import java.io.*;
 public class usuariosArchv extends Usuario {
     String ruta = "c:\\UEcarpeta\\";
     String file = "Usuarios.txt";
-    String separador = "|";
     public usuariosArchv() {}
 
     public usuariosArchv(String nombre, String usuario, String password, String direccion, String cedula) {

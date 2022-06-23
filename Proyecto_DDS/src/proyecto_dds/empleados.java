@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package proyecto_dds;
-
+import java.io.*;
 /**
  *
  * @author jenmu
@@ -19,7 +19,6 @@ public class empleados {
     private String telefono;
     private String ruta = "c:\\UEcarpeta\\";
     private String file = "Empleados.txt";
-    private String separeitor = "|";
     
     public empleados (){}
 
@@ -98,10 +97,19 @@ public class empleados {
         this.telefono = telefono;
     }
     
-    public boolean InsertarEmpleado(){
+    public boolean InsertarEmpleado (){
+    File carpeta = new File (ruta);
     
-    
+    try{
+    FileWriter fw = new FileWriter (ruta+file, true);
+    PrintWriter pw = new PrintWriter(fw);
+    pw.println(this.nombre+"|"+this.nombre2+"|"+this.apellido+"|"+this.apellido2+"|"+this.cedula+"|"+this.fechaN+"|"+this.direccion+"|"+this.telefono);
+    pw.close();
+    fw.close();
     return true;
+    }catch(IOException e){
+    return false;
     }
     
+    }
 }
