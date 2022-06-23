@@ -17,6 +17,9 @@ public class empleados {
     private String fechaN;
     private String direccion;
     private String telefono;
+    private String ruta = "c:\\UEcarpeta\\";
+    private String file = "Empleados.txt";
+    private String separeitor = "|";
     
     public empleados (){}
 
@@ -95,5 +98,10 @@ public class empleados {
         this.telefono = telefono;
     }
     
+    public boolean InsertarEmpleado(){
+    
+    
+    return true;
+    }
     
 }

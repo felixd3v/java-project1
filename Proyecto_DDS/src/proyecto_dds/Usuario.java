@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package proyecto_dds;
-
+import java.io.*;
 /**
  *
  * @author jenmu
@@ -14,7 +14,8 @@ public class Usuario {
     private String password;
     private String direccion;
     private String cedula;
-    
+    String ruta = "c:\\UEcarpeta\\";
+    String file = "Usuarios.txt";
     public Usuario (){}
 
     public Usuario(String nombre, String usuario, String password, String direccion, String cedula) {
@@ -65,5 +66,21 @@ public class Usuario {
         this.cedula = cedula;
     }
 
-     
+     public boolean InsertarUsuario (){
+    File carpeta = new File (ruta);
+    if(!carpeta.exists());
+    carpeta.mkdir();
+    
+    try{
+    FileWriter fw = new FileWriter (ruta+file);
+    PrintWriter pw = new PrintWriter(fw);
+    pw.println(this.usuario+"|"+this.password+"|"+this.nombre+"|"+this.cedula+"|"+this.direccion);
+    pw.close();
+    fw.close();
+    return true;
+    }catch(IOException e){
+    return false;
+    }
+    
+    }
 }

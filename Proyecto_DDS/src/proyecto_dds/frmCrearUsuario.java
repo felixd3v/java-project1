@@ -194,13 +194,12 @@ public class frmCrearUsuario extends javax.swing.JFrame {
     private void CrearUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearUsuarioActionPerformed
         // TODO add your handling code here:
         Usuario obj_usuario = new Usuario();
-        obj_usuario.setUsuario(txtusuario.getName());
-        obj_usuario.setPassword(txtpassword.getName());
-        obj_usuario.setNombre(txtnombre.getName());
-        obj_usuario.setCedula(txtcedula.getName());
-        obj_usuario.setDireccion(txtdireccion.getName());
-        usuariosArchv obj_userArchv = new usuariosArchv();
-        if(obj_userArchv.InsertarUsuario()){
+        obj_usuario.setUsuario(txtusuario.getText());
+        obj_usuario.setPassword(txtpassword.getText());
+        obj_usuario.setNombre(txtnombre.getText());
+        obj_usuario.setCedula(txtcedula.getText());
+        obj_usuario.setDireccion(txtdireccion.getText());
+        if(obj_usuario.InsertarUsuario()){
         JOptionPane.showMessageDialog(null, "El usuario se ha creado con éxito");
         }
         else{

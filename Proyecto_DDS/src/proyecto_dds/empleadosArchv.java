@@ -17,10 +17,4 @@ public class empleadosArchv extends empleados {
         super(nombre, apellido, nombre2, apellido2, cedula, fechaN, direccion, telefono);
     }
     
-    public void FileEmpleado (){
-    String ruta="c:\\UEcarpeta\\";
-    String file = "Empleados.txt";
-    
-    
-    }
 }
