@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package proyecto_dds;
-
+import java.io.*;
 /**
  *
  * @author jenmu
@@ -17,5 +17,10 @@ public class empleadosArchv extends empleados {
         super(nombre, apellido, nombre2, apellido2, cedula, fechaN, direccion, telefono);
     }
     
+    public void FileEmpleado (){
+    String ruta="c:\\UEcarpeta\\";
+    String file = "Empleados.txt";
     
+    
+    }
 }

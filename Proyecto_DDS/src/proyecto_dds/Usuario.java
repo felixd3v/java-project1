@@ -64,6 +64,6 @@ public class Usuario {
     public void setCedula(String cedula) {
         this.cedula = cedula;
     }
-    
-    
+
+     
 }
