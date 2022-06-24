@@ -137,14 +137,16 @@ public class frmBuscarEmpleado extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(204, 255, 204));
         jButton2.setText("Insertar");
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(204, 255, 204));
+        jButton3.setBackground(new java.awt.Color(204, 204, 255));
         jButton3.setText("Guardar");
+        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -286,10 +288,12 @@ public class frmBuscarEmpleado extends javax.swing.JFrame {
         op.setApellido(txtPapellido.getText());
         op.setApellido2(txtSapellido.getText());
         op.setCedula(txtcedu.getText());
-        cadena=comboYear.getItemAt(WIDTH)+"/";
-        cadena="/"+comboMes.getItemAt(WIDTH)+"/";
-        cadena="/"+comboDia.getItemAt(WIDTH);
 
+        //cadena=comboYear.getItemAt(WIDTH)+"/"+ comboMes.getItemAt(WIDTH)+"/" +comboDia.getItemAt(WIDTH);
+        //cadena=comboDia.getItemAt(WIDTH) +"/"+ comboMes.getItemAt(WIDTH)+"/"+comboYear.getItemAt(WIDTH);
+        cadena=comboDia.getItemAt(comboDia.getSelectedIndex()) +"/"+ comboMes.getItemAt(comboMes.getSelectedIndex())+"/"+comboYear.getItemAt(comboYear.getSelectedIndex());
+
+        
         op.setFechaN(cadena);
         op.setDireccion(txtdirec.getText());
         op.setTelefono(txttelefono.getText());
