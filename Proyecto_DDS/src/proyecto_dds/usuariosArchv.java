@@ -3,19 +3,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package proyecto_dds;
+import java.io.*;
 
 /**
  *
  * @author jenmu
  */
 public class usuariosArchv extends Usuario {
-
-    public usuariosArchv() {
-    }
+    String ruta = "c:\\UEcarpeta\\";
+    String file = "Usuarios.txt";
+    public usuariosArchv() {}
 
     public usuariosArchv(String nombre, String usuario, String password, String direccion, String cedula) {
         super(nombre, usuario, password, direccion, cedula);
     }
+    
     
     
 }

@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package proyecto_dds;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -14,7 +17,9 @@ public class Usuario {
     private String password;
     private String direccion;
     private String cedula;
-    
+    String ruta = "c:\\UEcarpeta\\";
+    String file = "Usuarios.txt";
+    String separador = "|";
     public Usuario (){}
 
     public Usuario(String nombre, String usuario, String password, String direccion, String cedula) {
@@ -64,6 +69,49 @@ public class Usuario {
     public void setCedula(String cedula) {
         this.cedula = cedula;
     }
+
+     public boolean InsertarUsuario (){
+    File carpeta = new File (ruta);
+    if(!carpeta.exists());
+    carpeta.mkdir();
     
+    try{
+    FileWriter fw = new FileWriter (ruta+file, true);
+    PrintWriter pw = new PrintWriter(fw);
+    pw.println(this.usuario+this.separador+this.password+this.separador+this.nombre+this.separador+this.cedula+this.separador+this.direccion);
+    pw.close();
+    fw.close();
+    return true;
+    }catch(IOException e){
+    return false;
+    }
     
+    }
+     
+     public ArrayList<Usuario> MostrarTodo(){
+         ArrayList <Usuario> user = new ArrayList<>();
+     File carpeta = new File (ruta);
+     if(!carpeta.exists());
+     carpeta.mkdir();
+     
+     File fFile = new File(ruta+file);
+     
+     try{
+     Scanner sc = new Scanner (fFile);
+     
+     while(sc.hasNextLine()){
+     String linea= sc.nextLine();
+     String[]arr = linea.split("\\|");
+     Usuario obj = new Usuario();
+     obj.setUsuario(arr[0]);
+     obj.setPassword(arr[1]);
+     obj.setNombre(arr[2]);
+     obj.setCedula(arr[3]);
+     obj.setDireccion(arr[4]);
+     user.add(obj);
+     }
+     
+     }catch(FileNotFoundException e){}
+        return null;
+     }
 }
