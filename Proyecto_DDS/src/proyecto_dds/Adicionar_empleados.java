@@ -3,10 +3,10 @@ package proyecto_dds;
 import javax.swing.JOptionPane;
 
 
-public class adicionar_empelado extends javax.swing.JFrame {
+public class adicionar_empleado extends javax.swing.JFrame {
 
     
-    public adicionar_empelado() {
+    public adicionar_empleado() {
         initComponents();
     }
 
@@ -246,7 +246,7 @@ public class adicionar_empelado extends javax.swing.JFrame {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new adicionar_empelado().setVisible(true);
+                new adicionar_empleado().setVisible(true);
             }
         });
     }
